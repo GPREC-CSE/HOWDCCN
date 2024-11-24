@@ -1,0 +1,66 @@
+Part 1 setting switch name(hostname)
+1)switch->drag and drop->open CLI mode
+2)enter
+3)switch>
+4)switch>enable
+5)switch#
+6)switch#show running-config
+7)switch#
+8)switch#exit
+9)switch>
+10)switch>enable
+11)switch#configure terminal
+12)switch(config)#hostname sw1
+13)sw1(config)#exit
+14)sw1#
+15)sw1#exit
+
+Part 2 print msg of the day(motd)
+1)sw1>enable
+2)sw1#
+3)sw1#configure terminal
+4)sw1(config)#
+5)sw1(config)#banner motd "hello gprec" //this will get printed on screen
+6)sw1(config)#
+7)sw1(config)#exit
+8)sw1#
+9)sw1#exit
+
+Part 3 setting up user mode
+1)sw1>enable
+2)sw1#
+3)sw1#configure terminal
+4)sw1(config)#line con 0
+5)sw1(config-line)#
+6)sw1(config-line)#password CSE
+7)sw1(config-line)#exit
+8)sw1(config)#
+9)sw1(config)#exit
+10)sw1#
+11)sw1#exit
+
+part 4 setting privileged mode
+1)sw1>
+2)sw1>enable
+3)sw1#configure terminal
+4)sw1(config)#
+5)sw1(config)#enable secret ecs
+6)sw1(config)#
+7)sw1(config)#exit
+8)sw1#
+9)sw1#exit
+
+Part 5 checking whether our switch is configured or not
+1)sw1>
+2)sw1>enable
+3)password:CSE
+4)password:ecs
+5)sw1#
+6)sw1#sh run
+
+Final to copy the configuration into memory
+1)sw1#
+2)sw1#copy running-config startup-config
+enter
+?=>enter
+[ok] indicates successful.
